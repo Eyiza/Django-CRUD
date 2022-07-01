@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from I4G017271LNA.blog.models import Post
+from .models import Post
 from django.urls import reverse_lazy
 from django.views import generic
 
@@ -24,3 +24,4 @@ class PostDeleteView(generic.DeleteView):
     model = Post
     fields = "__all__"
     success_url = reverse_lazy("blog:all")
+# Create your views here.
